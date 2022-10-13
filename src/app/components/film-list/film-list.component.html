@@ -1,1 +1,12 @@
-<p>film-list works!</p>
+<div class ="container">
+    <button mat-raised-button [disabled]="page==1" (click)="changePage(page-1)">Previous</button>
+    <button mat-raised-button [disabled]="page==i+1" *ngFor="let in of counter() ; let i=index"(click)="changePage(i+1)">{{i+1}}</button>
+    <button mat-raised-button [disabled]="page==maxPages" (click)="changePage(page+1)">Next</button>
+</div>
+<div class="container" >
+    <mat-card class="example-card" *ngFor="let film of list.results">
+        <mat-card-title>{{film.title}}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+        <img mat-card-image [src]="imgUrlBase + film.url.split('/')[5] + '.jpg'" alt="no sale" (error)="handleMissingImage($event)">
+    </mat-card>
+</div>
