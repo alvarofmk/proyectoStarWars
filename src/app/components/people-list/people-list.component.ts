@@ -17,7 +17,6 @@ export class PeopleListComponent implements OnInit {
   constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
-    debugger;
     this.characterService.getCharacters(this.page).subscribe(response =>{
       this.list = response;
       this.maxPages = Math.ceil(response.count/response.results.length);
@@ -31,6 +30,10 @@ export class PeopleListComponent implements OnInit {
 
   counter() {
     return new Array(this.maxPages);
+  }
+
+  handleMissingImage($evento: ErrorEvent) {
+    ($evento.target as HTMLImageElement).src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
   }
 
 }
