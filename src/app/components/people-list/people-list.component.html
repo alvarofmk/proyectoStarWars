@@ -6,15 +6,15 @@
     </button>
     <span *ngFor="let in of counter(); let i = index">
       <button
-        *ngIf="(i> page-4) && (i< page+2)"
-        [ngClass]="{'btnActive': page === i+1}"
+        *ngIf="i > page - 3 && i < page + 1 || i+1===maxPages|| i+1===1"
+        [ngClass]="{ btnActive: page === i + 1 }"
         (click)="changePage(i + 1)"
       >
         {{ i + 1 }}
       </button>
     </span>
     <button
-    class="btnArrow"
+      class="btnArrow"
       *ngIf="page != maxPages"
       (click)="changePage(page + 1)"
     >
