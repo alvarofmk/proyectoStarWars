@@ -12,7 +12,11 @@ export class PlanetService {
   constructor(private http: HttpClient) { }
 
   public getPlanets(number: number):Observable<PlanetResponse>{
-    return this.http.get<PlanetResponse>(`${environment.baseUrlAPI}/starships/?page=${number}`);
+    return this.http.get<PlanetResponse>(`${environment.baseUrlAPI}/planets/?page=${number}`);
+  }
+
+  public getPlanet(id: number):Observable<Planet>{
+    return this.http.get<Planet>(`${environment.baseUrlAPI}/planets/${id}`);
   }
 
   public getByUrl(url: string):Observable<Planet>{
