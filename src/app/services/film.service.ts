@@ -16,6 +16,10 @@ export class FilmService {
     );
   }
 
+  public getFilm(id: number):Observable<Film>{
+    return this.http.get<Film>(`${environment.baseUrlAPI}/films/${id}`);
+  }
+
   public getByUrl(url: string):Observable<Film>{
     return this.http.get<Film>(url);
   }
