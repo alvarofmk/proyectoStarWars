@@ -13,6 +13,7 @@ import { PlanetListComponent } from './components/planet-list/planet-list.compon
 import { SpeciesListComponent } from './components/species-list/species-list.component';
 import { StarshipListComponent } from './components/starship-list/starship-list.component';
 import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { VehicleListComponent } from './components/vehicle-list/vehicle-list.com
     PlanetListComponent,
     SpeciesListComponent,
     StarshipListComponent,
-    VehicleListComponent
+    VehicleListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
