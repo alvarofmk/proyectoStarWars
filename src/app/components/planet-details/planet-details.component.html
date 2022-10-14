@@ -1,0 +1,23 @@
+<div class="basicContainer mat-elevation-z2">
+    <img [src]="imgUrlBase + planet.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
+    <div class="details">
+        <h2>{{planet.name}}</h2>
+        <p>
+            <span>{{planet.population}}</span>
+            <br>
+            <span>{{planet.rotation_period}}</span>
+            <br>
+            <span>{{planet.orbital_period}}</span>
+            <br>
+            <span>{{planet.diameter}}</span>
+            <br>
+            <span>{{planet.gravity}}</span>
+            <br>
+            <span>{{planet.terrain}}</span>
+            <br>
+            <span>{{planet.surface_water}}</span>
+            <br>
+            <span>{{planet.climate}}</span>
+        </p>
+    </div>
+</div>

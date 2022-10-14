@@ -1,0 +1,15 @@
+<div class="basicContainer mat-elevation-z2">
+    <img [src]="imgUrlBase + film.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
+    <div class="details">
+        <h2>{{film.title}}</h2>
+        <p>
+            <span>{{film.release_date}}</span>
+            <br>
+            <span>{{film.director}}</span>
+            <br>
+            <span>{{film.producer}}</span>
+            <br>
+            <span>{{film.opening_crawl}}</span>
+        </p>
+    </div>
+</div>

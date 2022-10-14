@@ -1,0 +1,10 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.basicContainer{
+    display: flex;
+    flex-direction: row;
+    height: 320px;
+    border-radius: 10px;
+}
+.details{
+    padding: 20px;
+}

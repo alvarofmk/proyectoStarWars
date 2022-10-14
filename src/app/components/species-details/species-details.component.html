@@ -1,0 +1,23 @@
+<div class="basicContainer mat-elevation-z2">
+    <img [src]="imgUrlBase + species.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
+    <div class="details">
+        <h2>{{species.name}}</h2>
+        <p>
+            <span>{{species.classification}}</span>
+            <br>
+            <span>{{species.designation}}</span>
+            <br>
+            <span>{{species.language}}</span>
+            <br>
+            <span>{{species.average_lifespan}}</span>
+            <br>
+            <span>{{species.average_height}}</span>
+            <br>
+            <span>{{species.hair_colors}}</span>
+            <br>
+            <span>{{species.skin_colors}}</span>
+            <br>
+            <span>{{species.eye_colors}}</span>
+        </p>
+    </div>
+</div>
