@@ -15,6 +15,10 @@ export class VehicleService {
     return this.http.get<VehicleResponse>(`${environment.baseUrlAPI}/vehicles/?page=${number}`);
   }
 
+  public getVehicle(id: number):Observable<Vehicle>{
+    return this.http.get<Vehicle>(`${environment.baseUrlAPI}/vehicles/${id}`);
+  }
+
   public getByUrl(url: string):Observable<Vehicle>{
     return this.http.get<Vehicle>(url);
   }

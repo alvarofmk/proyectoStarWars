@@ -5,7 +5,7 @@
     <button mat-raised-button [disabled]="page==maxPages" (click)="changePage(page+1)">Next</button>
 </div>
 <div class="container" >
-    <mat-card class="example-card" *ngFor="let specie of list.results">
+    <mat-card class="example-card" *ngFor="let specie of list.results" [routerLink]="'/species/' + specie.url.split('/')[5]">
         <mat-card-title>{{specie.name}}</mat-card-title>
         <mat-card-subtitle></mat-card-subtitle>
         <img mat-card-image [src]="imgUrlBase + specie.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">

@@ -1,1 +1,25 @@
-<p>vehicle-details works!</p>
+<div class="basicContainer mat-elevation-z2">
+    <img [src]="imgUrlBase + vehicle.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
+    <div class="details">
+        <h2>{{vehicle.name}}</h2>
+        <p>
+            <span>{{vehicle.model}}</span>
+            <br>
+            <span>{{vehicle.manufacturer}}</span>
+            <br>
+            <span>{{vehicle.vehicle_class}}</span>
+            <br>
+            <span>{{vehicle.cost_in_credits}}</span>
+            <br>
+            <span>{{vehicle.max_atmosphering_speed}}</span>
+            <br>
+            <span>{{vehicle.length}}</span>
+            <br>
+            <span>{{vehicle.cargo_capacity}}</span>
+            <br>
+            <span>{{vehicle.crew}}</span>
+            <br>
+            <span>{{vehicle.passengers}}</span>
+        </p>
+    </div>
+</div>

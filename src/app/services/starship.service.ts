@@ -15,6 +15,10 @@ export class StarshipService {
     return this.http.get<StarshipResponse>(`${environment.baseUrlAPI}/starships/?page=${number}`);
   }
 
+  public getShip(id: number):Observable<Starship>{
+    return this.http.get<Starship>(`${environment.baseUrlAPI}/starships/${id}`);
+  }
+
   public getByUrl(url: string):Observable<Starship>{
     return this.http.get<Starship>(url);
   }

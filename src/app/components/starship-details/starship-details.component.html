@@ -1,1 +1,29 @@
-<p>starship-details works!</p>
+<div class="basicContainer mat-elevation-z2">
+    <img [src]="imgUrlBase + starship.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
+    <div class="details">
+        <h2>{{starship.name}}</h2>
+        <p>
+            <span>{{starship.model}}</span>
+            <br>
+            <span>{{starship.manufacturer}}</span>
+            <br>
+            <span>{{starship.starship_class}}</span>
+            <br>
+            <span>{{starship.cost_in_credits}}</span>
+            <br>
+            <span>{{starship.max_atmosphering_speed}}</span>
+            <br>
+            <span>{{starship.hyperdrive_rating}}</span>
+            <br>
+            <span>{{starship.MGLT}}</span>
+            <br>
+            <span>{{starship.length}}</span>
+            <br>
+            <span>{{starship.cargo_capacity}}</span>
+            <br>
+            <span>{{starship.crew}}</span>
+            <br>
+            <span>{{starship.passengers}}</span>
+        </p>
+    </div>
+</div>

@@ -16,6 +16,10 @@ export class SpecieService {
     );
   }
 
+  public getSingleSpecies(id: number):Observable<Specie>{
+    return this.http.get<Specie>(`${environment.baseUrlAPI}/species/${id}`);
+  }
+
   public getByUrl(url: string):Observable<Specie>{
     return this.http.get<Specie>(url);
   }
