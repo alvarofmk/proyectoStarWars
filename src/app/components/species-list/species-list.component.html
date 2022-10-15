@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<div class="container">
-    <button mat-raised-button routerLink="/index">Home</button>
-    <button mat-raised-button [disabled]="page==1" (click)="changePage(page-1)">Previous</button>
-    <button mat-raised-button [disabled]="page==i+1" *ngFor="let in of counter() ;let i = index" (click)="changePage(i+1)">{{i+1}}</button>
-    <button mat-raised-button [disabled]="page==maxPages" (click)="changePage(page+1)">Next</button>
-</div>
-<div class="container" >
-    <mat-card class="example-card" *ngFor="let specie of list.results" [routerLink]="'/species/' + specie.url.split('/')[5]">
-        <mat-card-title>{{specie.name}}</mat-card-title>
-        <mat-card-subtitle></mat-card-subtitle>
-        <img mat-card-image [src]="imgUrlBase + specie.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
-=======
 <div class="containerBut">
   <div class="home" routerLink="/index"><span>Home</span> / Species</div>
   <div class="buttons">
@@ -44,7 +31,6 @@
       />
       <mat-card-title>{{ specie.name }}</mat-card-title>
       <mat-card-subtitle></mat-card-subtitle>
->>>>>>> beb438c5c2044ad09371789479a8e35e4b32d21e
     </mat-card>
   </div>
 </div>
