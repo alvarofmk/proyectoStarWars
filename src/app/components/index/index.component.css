@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-shrink: 3;
+  justify-content: center;
+}
+button {
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+button:hover {
+  transform: scale(1.05);
+}
+button:focus {
+  transform: scale(0.95);
+}
+h1 {
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateY(7em);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}

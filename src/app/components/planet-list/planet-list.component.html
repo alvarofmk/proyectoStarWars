@@ -1,13 +1,36 @@
-<div class="container">
-    <button mat-raised-button routerLink="/index">Home</button>
-    <button mat-raised-button [disabled]="page==1" (click)="changePage(page-1)">Previous</button>
-    <button mat-raised-button [disabled]="page==i+1" *ngFor="let in of counter() ;let i = index" (click)="changePage(i+1)">{{i+1}}</button>
-    <button mat-raised-button [disabled]="page==maxPages" (click)="changePage(page+1)">Next</button>
-</div>
-<div class="container" >
-    <mat-card class="example-card" *ngFor="let planet of list.results" [routerLink]="'/planets/' + planet.url.split('/')[5]">
-        <mat-card-title>{{planet.name}}</mat-card-title>
-        <mat-card-subtitle>{{planet.climate}}</mat-card-subtitle>
-        <img mat-card-image [src]="imgUrlBase + planet.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
+<div class="containerBut">
+  <div class="home" routerLink="/index"><span>Home</span> / Planets</div>
+  <div class="buttons">
+    <button *ngIf="page != 1" (click)="changePage(page - 1)" class="btnArrow">
+      <
+    </button>
+    <span *ngFor="let in of counter(); let i = index">
+      <button
+        *ngIf="i > page - 4 && i < page + 2"
+        [ngClass]="{ btnActive: page === i + 1 || i+1===maxPages|| i+1===1}"
+        (click)="changePage(i + 1)"
+      >
+        {{ i + 1 }}
+      </button>
+    </span>
+    <button
+      class="btnArrow"
+      *ngIf="page != maxPages"
+      (click)="changePage(page + 1)"
+    >
+      >
+    </button>
+  </div>
+  <div class="container">
+    <mat-card class="example-card" *ngFor="let planet of list.results">
+      <img
+        mat-card-image
+        [src]="imgUrlBase + planet.url.split('/')[5] + '.jpg'"
+        alt="Photo of a Shiba Inu"
+        (error)="handleMissingImage($event)"
+      />
+      <mat-card-title>{{ planet.name }}</mat-card-title>
+      <mat-card-subtitle>{{ planet.climate }}</mat-card-subtitle>
     </mat-card>
+  </div>
 </div>

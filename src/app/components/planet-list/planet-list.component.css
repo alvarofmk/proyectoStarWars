@@ -1,13 +1,58 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 mat-card{
-    max-width: 300px;
-    margin-right: 15px;
+    max-width: 250px;
     display: inline-block;
-    margin-top: 15px;
+    border-radius: 6px;
 }
 .container{
     display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 21px;
+}
+.containerBut{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+}
+.home{
+    color: aliceblue;
+    font-size: 20px;
+    font-family: star-jedi;
+    text-align: left ;
+}
+.home span{
+    color: rgb(47, 113, 170);
+}
+.home span:hover{
+    color: bisque;
+}
+
+button{
+    font-size: 12px;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background-color: rgb(248, 253, 255);
+}
+button:hover{
+    transform: scale(1.1);
+}
+button:active{
+    background-color: rgb(131, 210, 241);
+}
+.btnActive{
+    background-color: rgb(131, 210, 241);
+}
+.btnArrow{
+    font-weight: bold;
+    width: 45px;
 }
