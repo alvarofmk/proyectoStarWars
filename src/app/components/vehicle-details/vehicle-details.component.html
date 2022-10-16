@@ -1,25 +1,26 @@
+<div class="home"><span routerLink="/index">Home</span> / <span routerLink="/vehicles">vehicles</span> / {{vehicle.name}}</div>
 <div class="basicContainer mat-elevation-z2">
     <img [src]="imgUrlBase + vehicle.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
     <div class="details">
         <h2>{{vehicle.name}}</h2>
         <p>
-            <span>{{vehicle.model}}</span>
+            <span><strong>Modelo:</strong> {{vehicle.model}}</span>
             <br>
-            <span>{{vehicle.manufacturer}}</span>
+            <span><strong>Constructor:</strong> {{vehicle.manufacturer}}</span>
             <br>
-            <span>{{vehicle.vehicle_class}}</span>
+            <span><strong>Clase:</strong> {{vehicle.vehicle_class}}</span>
             <br>
-            <span>{{vehicle.cost_in_credits}}</span>
+            <span><strong>Precio:</strong> {{vehicle.cost_in_credits}}</span>
             <br>
-            <span>{{vehicle.max_atmosphering_speed}}</span>
+            <span><strong>Velocidad máxima:</strong> {{vehicle.max_atmosphering_speed}}</span>
             <br>
-            <span>{{vehicle.length}}</span>
+            <span><strong>Longitud:</strong> {{vehicle.length}}</span>
             <br>
-            <span>{{vehicle.cargo_capacity}}</span>
+            <span><strong>Capacidad:</strong> {{vehicle.cargo_capacity}}</span>
             <br>
-            <span>{{vehicle.crew}}</span>
+            <span><strong>Tripulación:</strong> {{vehicle.crew}}</span>
             <br>
-            <span>{{vehicle.passengers}}</span>
+            <span><strong>Pasajeros</strong> {{vehicle.passengers}}</span>
         </p>
     </div>
 </div>

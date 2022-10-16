@@ -1,23 +1,24 @@
+<div class="home"><span routerLink="/index">Home</span> / <span routerLink="/people">Characters</span> / {{person.name}}</div>
 <div class="basicContainer mat-elevation-z2">
     <img [src]="imgUrlBase + person.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
     <div class="details">
         <h2>{{person.name}}</h2>
         <p>
-            <span>{{person.birth_year}}</span>
+            <span><strong>Año de nacimiento:</strong> {{person.birth_year}}</span>
             <br>
-            <span *ngFor="let species of species">{{species.name}}</span>
+            <span><strong>Especies:</strong> </span><span *ngFor="let species of species">{{species.name}}</span>
             <br>
-            <span>{{person.height}}</span>
+            <span><strong> Altura:</strong> {{person.height}}</span>
             <br>
-            <span>{{person.mass}}</span>
+            <span><strong>Peso:</strong> {{person.mass}}</span>
             <br>
-            <span>{{person.gender}}</span>
+            <span><strong>Genero:</strong> {{person.gender}}</span>
             <br>
-            <span>{{person.hair_color}}</span>
+            <span><strong>Color de pelo:</strong> {{person.hair_color}}</span>
             <br>
-            <span>{{person.skin_color}}</span>
+            <span><strong>Color de piel:</strong> {{person.skin_color}}</span>
             <br>
-            <span>{{planet.name}}</span>
+            <span><strong>Planeta de origen:</strong> {{planet.name}}</span>
         </p>
     </div>
 </div>

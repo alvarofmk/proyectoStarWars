@@ -23,14 +23,15 @@
   </div>
 </div>
 <div class="container">
-  <mat-card class="example-card" *ngFor="let character of list.results">
-    <img
-      mat-card-image
-      [src]="imgUrlBase + character.url.split('/')[5] + '.jpg'"
-      alt="image not found"
-      (error)="handleMissingImage($event)"
-    />
-    <mat-card-title>{{ character.name }}</mat-card-title>
-    <mat-card-subtitle>{{ character.gender }}</mat-card-subtitle>
-  </mat-card>
+  <a [routerLink]="'/people/'+character.url.split('/')[5]" *ngFor="let character of list.results">
+    <mat-card class="example-card">
+      <img
+        mat-card-image
+        [src]="imgUrlBase + character.url.split('/')[5] + '.jpg'"
+        alt="image not found"
+        (error)="handleMissingImage($event)"
+      />
+      <mat-card-title>{{ character.name }}</mat-card-title>
+    </mat-card>
+  </a> 
 </div>

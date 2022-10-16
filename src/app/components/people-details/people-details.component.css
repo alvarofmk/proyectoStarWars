@@ -4,7 +4,26 @@
     flex-direction: row;
     height: 320px;
     border-radius: 10px;
+    background-color: aliceblue;
 }
 .details{
     padding: 20px;
+    padding-left: 50px;
+}
+.home{
+    color: aliceblue;
+    font-size: 20px;
+    font-family: star-jedi;
+    text-align: left ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.home span{
+    color: rgb(47, 113, 170);
+}
+.home span:hover{
+    color: bisque;
+}
+span{
+    color: grey;
 }

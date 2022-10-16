@@ -1,15 +1,16 @@
+<div class="home"><span routerLink="/index">Home</span> / <span routerLink="/films">Films</span> / {{film.title}}</div>
 <div class="basicContainer mat-elevation-z2">
     <img [src]="imgUrlBase + film.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
     <div class="details">
         <h2>{{film.title}}</h2>
         <p>
-            <span>{{film.release_date}}</span>
+            <span><strong>Fecha de estreno:</strong> {{film.release_date}}</span>
             <br>
-            <span>{{film.director}}</span>
+            <span><strong>Director:</strong> {{film.director}}</span>
             <br>
-            <span>{{film.producer}}</span>
+            <span><strong>Productor:</strong> {{film.producer}}</span>
             <br>
-            <span>{{film.opening_crawl}}</span>
+            <span><strong>Sinopsis:</strong> {{film.opening_crawl}}</span>
         </p>
     </div>
 </div>
