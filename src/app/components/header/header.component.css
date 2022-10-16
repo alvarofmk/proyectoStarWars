@@ -8,6 +8,9 @@ button{
     width: 40px;
     height: 40px;
 }
+button:hover{
+    transform: scale(1.1);
+}
 .title{
     font-family: star-jedi;
     font-weight: bolder;

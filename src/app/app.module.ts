@@ -20,6 +20,7 @@ import { StarshipDetailsComponent } from './components/starship-details/starship
 import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-details.component';
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HelpDialogComponent } from './dialogs/help-dialog/help-dialog.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HeaderComponent } from './components/header/header.component';
     StarshipDetailsComponent,
     VehicleDetailsComponent,
     FilmDetailsComponent,
-    HeaderComponent
+    HeaderComponent,
+    HelpDialogComponent
   ],
   imports: [
     BrowserModule,
