@@ -22,15 +22,17 @@
     </button>
   </div>
   <div class="container">
-    <mat-card class="example-card" *ngFor="let specie of list.results">
-      <img
-        mat-card-image
-        [src]="imgUrlBase + specie.url.split('/')[5] + '.jpg'"
-        alt="image not found"
-        (error)="handleMissingImage($event)"
-      />
-      <mat-card-title>{{ specie.name }}</mat-card-title>
-      <mat-card-subtitle></mat-card-subtitle>
-    </mat-card>
+    <a [routerLink]="'/species/' + specie.url.split('/')[5]" *ngFor="let specie of list.results">
+      <mat-card class="example-card">
+        <img
+          mat-card-image
+          [src]="imgUrlBase + specie.url.split('/')[5] + '.jpg'"
+          alt="image not found"
+          (error)="handleMissingImage($event)"
+        />
+        <mat-card-title>{{ specie.name }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card>
+    </a>
   </div>
 </div>

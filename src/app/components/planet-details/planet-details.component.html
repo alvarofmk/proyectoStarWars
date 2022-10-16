@@ -1,23 +1,24 @@
+<div class="home"><span routerLink="/index">Home</span> / <span routerLink="/planets">Planets</span> / {{planet.name}}</div>
 <div class="basicContainer mat-elevation-z2">
     <img [src]="imgUrlBase + planet.url.split('/')[5] + '.jpg'" alt="Photo of a Shiba Inu" (error)="handleMissingImage($event)">
     <div class="details">
         <h2>{{planet.name}}</h2>
         <p>
-            <span>{{planet.population}}</span>
+            <span><strong>Planeta:</strong> {{planet.population}}</span>
             <br>
-            <span>{{planet.rotation_period}}</span>
+            <span><strong>Periodo de rotación:</strong> {{planet.rotation_period}}</span>
             <br>
-            <span>{{planet.orbital_period}}</span>
+            <span><strong>Periodo orbital:</strong> {{planet.orbital_period}}</span>
             <br>
-            <span>{{planet.diameter}}</span>
+            <span><strong>Diámetro:</strong> {{planet.diameter}}</span>
             <br>
-            <span>{{planet.gravity}}</span>
+            <span><strong>Fuerza de gravedad:</strong> {{planet.gravity}}</span>
             <br>
-            <span>{{planet.terrain}}</span>
+            <span><strong>Terreno:</strong> {{planet.terrain}}</span>
             <br>
-            <span>{{planet.surface_water}}</span>
+            <span><strong>Porcentaje de agua en superficie:</strong> {{planet.surface_water}}</span>
             <br>
-            <span>{{planet.climate}}</span>
+            <span><strong>Clima:</strong> {{planet.climate}}</span>
         </p>
     </div>
 </div>

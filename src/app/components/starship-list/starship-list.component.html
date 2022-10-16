@@ -24,15 +24,17 @@
     </button>
   </div>
   <div class="container">
-    <mat-card class="example-card" *ngFor="let ship of list.results">
-      <img
-        mat-card-image
-        [src]="imgUrlBase + ship.url.split('/')[5] + '.jpg'"
-        alt="image not found"
-        (error)="handleMissingImage($event)"
-      />
-      <mat-card-title>{{ ship.name }}</mat-card-title>
-      <mat-card-subtitle>{{ ship.model }}</mat-card-subtitle>
-    </mat-card>
+    <a [routerLink]="'/starships/' + ship.url.split('/')[5]" *ngFor="let ship of list.results">
+      <mat-card class="example-card">
+        <img
+          mat-card-image
+          [src]="imgUrlBase + ship.url.split('/')[5] + '.jpg'"
+          alt="image not found"
+          (error)="handleMissingImage($event)"
+        />
+        <mat-card-title>{{ ship.name }}</mat-card-title>
+        <mat-card-subtitle>{{ ship.model }}</mat-card-subtitle>
+      </mat-card>
+    </a>
   </div>
 </div>
