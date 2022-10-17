@@ -39,14 +39,6 @@ export class PeopleListComponent implements OnInit {
     ($evento.target as HTMLImageElement).src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
   }
 
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(FormDialogComponent, {
-      width: '500px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-  }
-
   openLoadedDialog(enterAnimationDuration: string, exitAnimationDuration: string, characterToEdit: Person): void {
     this.dialog.open(FormDialogComponent, {
       width: '500px',

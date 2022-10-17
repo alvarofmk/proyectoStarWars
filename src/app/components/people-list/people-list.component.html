@@ -1,8 +1,8 @@
 <div class="containerBut">
   <div class="home" routerLink="/index"><span>Home</span> / Characters</div>
   <div>
-    <button mat-fab color="accent" (click)="openDialog('0ms', '0ms')">
-      <mat-icon>bookmark</mat-icon>
+    <button mat-fab color="primary" (click)="openLoadedDialog('0ms', '0ms', characterToEdit)">
+      <mat-icon>add</mat-icon>
     </button>
   </div>
   <div class="buttons">
@@ -37,7 +37,9 @@
         (error)="handleMissingImage($event)"
       />
       <mat-card-title>{{ character.name }}</mat-card-title>
+      <mat-card-actions align="end">
+        <button mat-button color="primary" (click)="openLoadedDialog('0ms', '0ms', character)">Editar</button>
+      </mat-card-actions>
     </mat-card>
-    <button mat-raised-button color="primary" (click)="openLoadedDialog('0ms', '0ms', character)">Editar</button>
   </a> 
 </div>

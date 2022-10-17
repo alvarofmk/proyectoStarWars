@@ -36,7 +36,7 @@ mat-card{
     color: bisque;
 }
 
-button{
+.buttons button{
     font-size: 12px;
     height: 35px;
     width: 35px;
