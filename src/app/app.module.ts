@@ -21,6 +21,8 @@ import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-de
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelpDialogComponent } from './dialogs/help-dialog/help-dialog.component';
+import { FormDialogComponent } from './components/form-dialog/form-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,14 +41,16 @@ import { HelpDialogComponent } from './dialogs/help-dialog/help-dialog.component
     VehicleDetailsComponent,
     FilmDetailsComponent,
     HeaderComponent,
-    HelpDialogComponent
+    HelpDialogComponent,
+    FormDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialImportsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

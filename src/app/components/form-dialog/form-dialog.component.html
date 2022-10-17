@@ -1,0 +1,50 @@
+<form [formGroup]="characterForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput id="name" type="text" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Altura</mat-label>
+        <input matInput id="height" type="text" formControlName="height">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Peso</mat-label>
+        <input matInput id="mass" type="text" formControlName="mass">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Color de pelo</mat-label>
+        <input matInput id="hair_color" type="text" formControlName="hair_color">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Color de piel</mat-label>
+        <input matInput id="skin_color" type="text" formControlName="skin_color">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Color de ojos</mat-label>
+        <input matInput id="eye_color" type="text" formControlName="eye_color">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Año de nacimiento</mat-label>
+        <input matInput id="birth_year" type="text" formControlName="birth_year">
+    </mat-form-field>
+    <mat-select name="gender" formControlName="gender">
+        <mat-option *ngFor="let gender of genders" [value]="gender">{{gender}}</mat-option>
+    </mat-select>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Pais de origen</mat-label>
+        <input matInput id="homeworld" type="text" formControlName="homeworld">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Creado en:</mat-label>
+        <input matInput id="created" type="text" formControlName="created">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Editado en:</mat-label>
+        <input matInput id="edited" type="text" formControlName="edited">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Url</mat-label>
+        <input matInput id="url" type="text" formControlName="url">
+    </mat-form-field>
+    <input type="submit" value="guardar">
+</form>

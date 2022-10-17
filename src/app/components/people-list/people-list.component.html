@@ -1,5 +1,10 @@
 <div class="containerBut">
   <div class="home" routerLink="/index"><span>Home</span> / Characters</div>
+  <div>
+    <button mat-fab color="accent" (click)="openDialog('0ms', '0ms')">
+      <mat-icon>bookmark</mat-icon>
+    </button>
+  </div>
   <div class="buttons">
     <button *ngIf="page != 1" (click)="changePage(page - 1)" class="btnArrow">
       <
@@ -33,5 +38,6 @@
       />
       <mat-card-title>{{ character.name }}</mat-card-title>
     </mat-card>
+    <button mat-raised-button color="primary" (click)="openLoadedDialog('0ms', '0ms', character)">Editar</button>
   </a> 
 </div>

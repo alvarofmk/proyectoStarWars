@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PeopleResponse } from 'src/app/interfaces/people.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { PeopleResponse, Person } from 'src/app/interfaces/people.interface';
 import { CharacterService } from 'src/app/services/character.service';
+import { FormDialogComponent } from '../form-dialog/form-dialog.component';
 
 @Component({
   selector: 'app-people-list',
@@ -13,8 +15,9 @@ export class PeopleListComponent implements OnInit {
   page: number = 1;
   maxPages: number = 0;
   imgUrlBase: string = "https://starwars-visualguide.com/assets/img/characters/"
+  characterToEdit: Person = {} as Person;
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private characterService: CharacterService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.characterService.getCharacters(this.page).subscribe(response =>{
@@ -34,6 +37,25 @@ export class PeopleListComponent implements OnInit {
 
   handleMissingImage($evento: ErrorEvent) {
     ($evento.target as HTMLImageElement).src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
+  }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(FormDialogComponent, {
+      width: '500px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  openLoadedDialog(enterAnimationDuration: string, exitAnimationDuration: string, characterToEdit: Person): void {
+    this.dialog.open(FormDialogComponent, {
+      width: '500px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: {
+        person: characterToEdit
+      }
+    });
   }
 
 }
